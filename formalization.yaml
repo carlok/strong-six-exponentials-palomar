@@ -1,0 +1,180 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml v0.4
+version: v0.4
+project:
+  name: Roy's strong six exponentials theorem and Roy's rank bound for matrices of logarithms
+  description: Roy's strong six exponentials theorem (Roy 1992, Corollary 2; Waldschmidt 2000, Corollary
+    11.16). If x₁, x₂ and y₁, y₂, y₃ are each linearly independent over the algebraic numbers Q̄,
+    then one of the six products xᵢ yⱼ lies outside ℒ̃, the Q̄-span of 1 and the logarithms of algebraic
+    numbers. Roy's rank bound (Roy 1992, Corollary 1; Waldschmidt 2000, Theorem 12.20 and Corollary
+    12.21). For a d × l matrix M with entries in ℒ̃, there are invertible algebraic matrices P, Q
+    and sizes 0 < d' ≤ d, l' ≤ l such that PMQ has a zero d' × (l − l') block and d l' ≤ rank(M) (d'
+    + l'). This repository is a self-contained extract of these theorems from the library github.com/carlok/diaz-modulus-lean,
+    which is the canonical home of the proofs.
+  authors:
+  - Carlo Perassi
+  license: Apache-2.0
+  responsible_maintainers:
+  - Carlo Perassi
+classification:
+  arxiv:
+  - math.NT
+  - cs.LO
+  msc2020:
+  - 11J86
+  - 11J81
+  - 68V20
+sources:
+- title: Matrices whose coefficients are linear forms in logarithms
+  authors:
+  - Damien Roy
+  type: paper
+  location: Journal of Number Theory 41 (1992), 22–47
+  relationship: formalizes
+  note: Corollary 1 (the rank bound) and Corollary 2 (the strong six exponentials theorem).
+  license: unknown
+  author_endorsement: n/a
+- title: Diophantine Approximation on Linear Algebraic Groups
+  authors:
+  - Michel Waldschmidt
+  type: book
+  location: Grundlehren der mathematischen Wissenschaften 326, Springer, 2000
+  relationship: formalizes
+  note: Corollary 11.16 via Theorem 11.21, and Theorem 12.20 with Corollary 12.21. The multiplicity
+    estimate these rest on is proved in the elementary case the argument needs (Theorem 8.1).
+  license: unknown
+  author_endorsement: n/a
+- title: Lemmes de zéros dans les groupes algébriques commutatifs
+  authors:
+  - Patrice Philippon
+  type: paper
+  location: Bulletin de la Société Mathématique de France 114 (1986), 355–383
+  relationship: background
+  note: The multiplicity estimate in general; the library proves only the elementary case it uses.
+  license: unknown
+  author_endorsement: n/a
+related_formalizations:
+- id: https://github.com/carlok/diaz-modulus-lean
+  relationship: other
+  note: The canonical home of these proofs, by the same author, and of a wider library on Diaz's conjecture.
+    This repository copies the import closure of the compared theorems (120 modules, at commit 465147a3ec8bec43ad0046c1f3ccdfc41afc88cf)
+    with only the changes the Lean module system needs, so that they can be checked on their own.
+    The module paths and namespaces are those of the library. Corrections are made there first.
+- id: https://github.com/telaviv/strong-six-exponentials
+  relationship: independent
+  note: An independent Lean development of the strong six exponentials theorem by another author,
+    public since 2026-10-18; it is also in the LeanPool collection. Cited as related work; nothing
+    here was taken from it.
+- id: https://github.com/leanprover-community/mathlib4/pull/28013
+  relationship: other
+  note: The module Diaz.LindemannWeierstrass in this extract is ported from this unmerged Mathlib
+    pull request (Lindemann–Weierstrass), with credit to its authors. It lies in the import closure
+    through Diaz.Axioms; the compared theorems are not taken from it.
+- id: https://palomar-registry.org/entry?id=PALOMAR-2026-11-22-000020&version=1
+  relationship: other
+  note: The six exponentials theorem from the same library, registered separately by the same author
+    on 2026-11-22. It is not compared again here.
+status:
+  scope: 'Formalized and compared: StrongSixExponentials.strong_six_exponentials (Roy 1992, Corollary
+    2; Waldschmidt 2000, Corollary 11.16, via Theorem 11.21); StrongSixExponentials.roy_rank_bound
+    (Roy 1992, Corollary 1; Waldschmidt 2000, Theorem 12.20 and Corollary 12.21). Not formalized:
+    Roy''s Theorem 5 in general position; the strong four exponentials conjecture, which is open.'
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+  main_results:
+  - declaration: StrongSixExponentials.strong_six_exponentials
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+  - declaration: StrongSixExponentials.roy_rank_bound
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+  - declaration: Diaz.strongSixExponentials
+    file: Diaz/StrongSixExponentials.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+  - declaration: Diaz.roy_rank_bound
+    file: Diaz/Mirror/roy_rank_bound.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+automation:
+  methods:
+  - method: agent
+    models:
+    - Claude (Anthropic); the model version was not recorded per proof
+    framework: Claude Code
+    tool_setup: Claude agents (Anthropic) wrote the Lean statements and proofs under Carlo Perassi's
+      direction, one statement at a time, and submitted them to the Prove2Me platform (https://prove2.me),
+      which checked and accepted them. They were then mirrored into diaz-modulus-lean. The proofs
+      use ordinary Mathlib tactics and terms; there is no native_decide.
+    cost:
+      wall_time: not tracked
+      spend_usd: not tracked
+      hardware: local machine
+    prompting_notes: not recorded
+  - method: agent
+    models:
+    - Claude Opus 5.5
+    framework: Claude Code
+    tool_setup: 'A Claude agent made this extract under Carlo Perassi''s direction: it copied the
+      120 modules of the import closure from diaz-modulus-lean, made the module-system changes, and
+      wrote Challenge.lean, Solution.lean, this file, the README and the CI workflow.'
+    cost:
+      wall_time: not tracked
+      spend_usd: not tracked
+      hardware: cloud workspace
+    prompting_notes: not recorded
+  spend_usd: not tracked
+  notes: 'The Lean code and the texts in this repository were written by Claude agents (Anthropic)
+    under the direction of Carlo Perassi, who is responsible for them. No claim rests on an assertion
+    by a language model: the proofs are checked by Lean''s kernel at the pinned toolchain, and the
+    axioms of the compared theorems are audited in CI.'
+fidelity:
+  divergences: 'None known. Each Challenge statement is written with Mathlib''s notions only. (algebraicClosure
+    ℚ ℂ).toSubfield is Q̄, the algebraic numbers as a subfield of ℂ. Submodule.span Q̄ (insert 1 {u
+    | IsAlgebraic ℚ (exp u)}) is ℒ̃. The statement is unconditional: no hypothesis stands in for the
+    multiplicity estimate. The zero block is the entries (P * M * Q) i j with i < d'' and j ≥ l''.
+    M.rank is Mathlib''s rank over ℂ; P, Q have entries in Q̄ and unit determinant. The compared theorems
+    live in the namespace StrongSixExponentials and the library theorems keep their library names;
+    the statements are the same up to unfolding the library''s abbreviations.'
+review:
+  status: machine-checked; no human expert review of the Lean
+  reviewers: []
+  notes: 'Checks made: the Prove2Me platform checked and accepted the proofs when they were first
+    submitted, and diaz-modulus-lean builds them in CI with leanprover/lean4:v4.36.0 and Mathlib v4.36.0.
+    This repository''s CI builds the extract, audits the axioms with #print axioms, and runs the toolchain''s
+    lake comparator. No mathematician has reviewed the Lean code, and the Challenge statements have
+    not been reviewed against the sources by anyone independent of their authors.'
+alignment:
+  namespace: StrongSixExponentials
+  statements:
+  - source: Roy 1992, Corollary 2; Waldschmidt 2000, Corollary 11.16, via Theorem 11.21
+    lean: StrongSixExponentials.strong_six_exponentials
+    module: Challenge
+    status: proved
+    note: Proved by the library theorem Diaz.strongSixExponentials.
+  - source: Roy 1992, Corollary 1; Waldschmidt 2000, Theorem 12.20 and Corollary 12.21
+    lean: StrongSixExponentials.roy_rank_bound
+    module: Challenge
+    status: proved
+    note: Proved by the library theorem Diaz.roy_rank_bound.
+acknowledgements: 'The Mathlib community, for Lean 4 and Mathlib; the authors of Mathlib pull request
+  #28013 (Lindemann–Weierstrass), whose code is ported in the library; and the Prove2Me platform,
+  where the proofs were first submitted and checked.'

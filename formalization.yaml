@@ -16,6 +16,10 @@ project:
   license: Apache-2.0
   responsible_maintainers:
   - Carlo Perassi
+repository:
+  substantive_formalization:
+    id: https://github.com/carlok/diaz-modulus-lean
+    revision: 59d5a598c2927b4100442a39f84c6841ebc5afa6
 classification:
   arxiv:
   - math.NT

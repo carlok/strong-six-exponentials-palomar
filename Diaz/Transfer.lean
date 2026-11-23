@@ -19,7 +19,7 @@ Existence of the isomorphism comes from the Steinitz extension theorem,
 `exists_ringHom_of_transcendental` in `Diaz.Axioms`, used in
 `exists_conj_intertwining` below.
 -/
--- Origin: `Diaz/Transfer.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Transfer.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

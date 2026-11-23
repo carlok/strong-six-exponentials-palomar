@@ -5,7 +5,7 @@ Ported mechanically from the accepted submission archived as
 `archive/prove2me/DiazModulus.box_ray_upper_bound__bfd88dd6.lean`. Statement and proof are the platform's; only
 imports, namespaces and the theorem's name were rewritten.
 -/
--- Origin: `Diaz/Mirror/box_ray_upper_bound.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Mirror/box_ray_upper_bound.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

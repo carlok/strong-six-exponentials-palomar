@@ -8,7 +8,7 @@ Names and spellings that changed between the platform's Mathlib revision and the
 pinned here were updated to match, and proof steps that became no-ops there were
 dropped; the mathematics is unchanged.
 -/
--- Origin: `Diaz/Mirror/interp_det_liouville.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Mirror/interp_det_liouville.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 
@@ -209,7 +209,6 @@ lemma det_lower {F : Type*} [Field F] [NumberField F] (σ : F →+* ℂ) {b : F}
 
 end C14_A10
 
-set_option maxHeartbeats 400000 in
 open C14_A10 in
 theorem interp_det_liouville {ι₀ ι₁ κ₀ κ₁ : Type} [Fintype ι₀] [Fintype ι₁] [Fintype κ₀] [Fintype κ₁]
     [DecidableEq ι₀] [DecidableEq ι₁]

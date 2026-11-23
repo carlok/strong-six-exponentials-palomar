@@ -13,7 +13,7 @@ end-to-end theorem to it. The instance does exist in Mathlib
 (`algebraicClosure.isAlgebraic`); what was missing is that it does not
 fire through the `IntermediateField → Subfield` coercion on its own.
 -/
--- Origin: `Diaz/Instantiation.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Instantiation.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

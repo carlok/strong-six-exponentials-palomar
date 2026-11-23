@@ -4,11 +4,8 @@ Mirrored from Prove2Me: `DiazModulus.exists_sse_lifts`.
 Ported mechanically from the accepted submission archived as
 `archive/prove2me/DiazModulus.exists_sse_lifts__6a388a20.lean`. Statement and proof are the platform's; only
 imports, namespaces and the theorem's name were rewritten.
-Names and spellings that changed between the platform's Mathlib revision and the one
-pinned here were updated to match, and proof steps that became no-ops there were
-dropped; the mathematics is unchanged.
 -/
--- Origin: `Diaz/Mirror/exists_sse_lifts.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Mirror/exists_sse_lifts.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 
@@ -79,7 +76,6 @@ theorem shape_term (K : IntermediateField ℚ ℂ) [FiniteDimensional ℚ K]
 
 end C14_S1
 
-set_option maxHeartbeats 2400000 in
 open C14_S1 in
 theorem exists_sse_lifts (x : Fin 2 → ℂ) (y : Fin 3 → ℂ) (hxy : ∀ i j, x i * y j ∈ LogAlgTilde) :
     ∃ (m : ℕ) (ω : Fin m → ℂ) (η : Fin m × Fin 3 → (Fin 2 → ℂ) × (Fin m × Fin 2 → ℂ)),

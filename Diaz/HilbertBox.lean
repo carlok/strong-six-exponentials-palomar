@@ -13,7 +13,7 @@ need it take it as the explicit hypothesis `hU`. The ported C1.2 node `Diaz.unmi
 proves it for polynomial rings over an algebraically closed field, and `Diaz/HilbertSide.lean`
 uses that to state the Hilbert side over `ℂ` without `hU`.
 -/
--- Origin: `Diaz/HilbertBox.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/HilbertBox.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

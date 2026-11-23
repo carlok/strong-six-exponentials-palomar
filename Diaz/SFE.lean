@@ -16,7 +16,7 @@ development is an attempt to ask for less than this.
 
 Conventions as in `Diaz.Multipliers`.
 -/
--- Origin: `Diaz/SFE.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/SFE.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

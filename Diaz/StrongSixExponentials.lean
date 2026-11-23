@@ -31,7 +31,7 @@ without it: `candidate_multiplier_module` (in `Diaz/Multipliers.lean`), and the 
 `diaz_2007_th7`, `logAlgTilde_adjoin_circle_point_no_two_by_three_configuration`,
 `nonreal_two_point_fibre_pi_sq` and `pi_powers_not_both_mem_logAlgTilde`.
 -/
--- Origin: `Diaz/StrongSixExponentials.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/StrongSixExponentials.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

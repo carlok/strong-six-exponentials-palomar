@@ -13,7 +13,7 @@ obstruction spans of DALAG §8.4.1. The ported C1.3 node `Diaz.multiplicityEstim
 `hME` from it, and with it Roy's strong six exponentials theorem holds in the library with no
 hypothesis (`Diaz.strongSixExponentials`, `Diaz/RoyUnconditional.lean`).
 -/
--- Origin: `Diaz/Multiplicity.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Multiplicity.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

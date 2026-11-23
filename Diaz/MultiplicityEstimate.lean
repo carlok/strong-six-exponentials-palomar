@@ -14,7 +14,7 @@ C1.3 node `Diaz.multiplicityEstimateElem` proves it (its vocabulary is `Diaz/Mul
 so `Diaz.strongSixExponentials` (`Diaz/StrongSixExponentials.lean`) holds with no hypothesis.
 The docstring of the definition below is the platform's, written before that proof.
 -/
--- Origin: `Diaz/MultiplicityEstimate.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/MultiplicityEstimate.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

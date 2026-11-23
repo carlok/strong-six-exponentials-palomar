@@ -5,7 +5,7 @@ Ported mechanically from the accepted submission archived as
 `archive/prove2me/DiazModulus.thetaN_ge_mul_sub__f225fc3d.lean`. Statement and proof are the platform's; only
 imports, namespaces and the theorem's name were rewritten.
 -/
--- Origin: `Diaz/Mirror/thetaN_ge_mul_sub.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Mirror/thetaN_ge_mul_sub.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

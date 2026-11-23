@@ -6,7 +6,7 @@ depends on Mathlib alone, which is the point of it being a separate module:
 `Diaz.Axioms` imports it to prove Hermite–Lindemann, and everything in the library
 imports `Diaz.Axioms`, so nothing here may import the library.
 -/
--- Origin: `Diaz/LindemannWeierstrass.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/LindemannWeierstrass.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

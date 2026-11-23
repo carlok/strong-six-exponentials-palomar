@@ -8,7 +8,7 @@ Names and spellings that changed between the platform's Mathlib revision and the
 pinned here were updated to match, and proof steps that became no-ops there were
 dropped; the mathematics is unchanged.
 -/
--- Origin: `Diaz/Mirror/roy_semistable_node.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Mirror/roy_semistable_node.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 
@@ -183,7 +183,7 @@ theorem transport {d n : ℕ}
   · rwa [← hfin (U.comap E), hU'map] at key
   · intro S' hS'
     have hSrat : IsRat (S'.map E) := by
-      apply le_antisymm (Submodule.span_le.mpr fun _ hv => And.left hv)
+      apply le_antisymm (Submodule.span_le.mpr fun _ hv => hv.1)
       calc S'.map E = (Submodule.span ℂ {v | v ∈ S' ∧ ∀ i, v i ∈ Qbar}).map E := by rw [hS']
         _ = Submodule.span ℂ (E '' {v | v ∈ S' ∧ ∀ i, v i ∈ Qbar}) := Submodule.map_span _ _
         _ ≤ _ := Submodule.span_mono (by

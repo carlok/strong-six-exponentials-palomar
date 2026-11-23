@@ -22,7 +22,7 @@ Nothing here needs `RatFunc`: a transcendental `t` generates a rational
 function field anyway, and working inside `ℂ` keeps complex conjugation
 as the involution instead of a constructed one.
 -/
--- Origin: `Diaz/Model.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Model.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 

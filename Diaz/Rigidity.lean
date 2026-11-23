@@ -17,7 +17,7 @@ boundary of the Matrix Coefficient Conjecture.
 
 Note what is *not* needed: transcendence of `u`. Only `u ∉ K` is used.
 -/
--- Origin: `Diaz/Rigidity.lean` in https://github.com/carlok/diaz-modulus-lean at 465147a3ec8b
+-- Origin: `Diaz/Rigidity.lean` in https://github.com/carlok/diaz-modulus-lean at 59d5a598c292
 -- (Apache-2.0), unchanged except for what the Lean module system needs.
 module
 
